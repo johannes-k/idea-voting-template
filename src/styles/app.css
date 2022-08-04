@@ -1,0 +1,57 @@
+.App {
+  max-width: 960px;
+  width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  padding-top: 20px;
+  flex: 0 1 auto;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+header h1 {
+  margin: 0;
+  font-family: 'Dancing Script', cursive;
+  font-size: 42px;
+}
+
+header .right {
+  display: flex;
+  flex-direction: row;
+}
+
+header .right select {
+  margin-right: 30px;
+  background-color: #484848;
+  color: #efefef;
+  border: none;
+  stroke: #fff;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.Content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+
+.button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  outline: none;
+  font-size: 20px;
+}

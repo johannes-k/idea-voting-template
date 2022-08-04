@@ -1,0 +1,195 @@
+.ideasWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 7px;
+}
+
+.cardWrapper {
+  width: 100%;
+  box-shadow: 1px 1px 4px #282828;
+  position: relative;
+}
+
+.card {
+  background-color: #383838;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 20px;
+  min-height: 200px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.card .likeCounter {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.card .likeCounter span {
+  margin-left: 5px;
+}
+
+.cardWrapper .deleteIdea {
+  position: absolute;
+  width: 60px;
+  height: 40px;
+  top: 0px;
+  left: 0px;
+  background-color: inherit;
+  border: none;
+  color: #2c2c2c;
+  font-size: 20px;
+  padding: 0 20px 10px 20px;
+  opacity: 0;
+  z-index: -999;
+  transition: all 0.3s ease;
+}
+
+.cardWrapper:hover .deleteIdea {
+  opacity: 100;
+  z-index: 9999;
+  padding-top: 10px;
+}
+
+.deleteIdea:hover {
+  color: #efefef;
+}
+
+.card .ideaTitle {
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.cardWrapper > button {
+  height: 100%;
+  width: 100%;
+  background-color: inherit;
+  border: none;
+  padding: 0;
+  color: #efefef;
+}
+
+.cardWrapper > button:focus-visible {
+  outline: none;
+}
+
+.createIdeaCard:hover .card {
+  background-color: #484848;
+}
+
+.createIdeaCard .icon {
+  color: #2c2c2c;
+  font-size: 48px;
+  transition: color 0.3s ease;
+}
+
+.createIdeaCard .text {
+  margin-top: 10px;
+  color: #222;
+  transition: color 0.3s ease;
+}
+
+.createIdeaCard:hover .card .icon,
+.createIdeaCard:hover .card .text {
+  color: #fff;
+}
+
+@media only screen and (min-width: 600px) {
+  .cardWrapper {
+    width: calc(50% - 5px);
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .cardWrapper {
+    width: calc(33.3333% - 5px);
+  }
+}
+
+.like-button {
+  position: absolute;
+  background: none;
+  border: none;
+  bottom: 10px;
+  opacity: 0;
+  z-index: -999;
+  transition: all 0.3s ease;
+}
+
+.heart-like-button {
+  position: relative;
+  width: 30px;
+  height: 25px;
+}
+
+.heart-like-button:before {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  transform: rotate(-45deg);
+  transform-origin: 0 100%;
+  width: 15px;
+  height: 25px;
+  border-radius: 8px 8px 0 0;
+  background-color: #222;
+  content: '';
+  cursor: pointer;
+  transition: background 0.4s;
+}
+
+.heart-like-button:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(45deg);
+  transform-origin: 100% 100%;
+  width: 15px;
+  height: 25px;
+  border-radius: 8px 8px 0 0;
+  background-color: #222;
+  content: '';
+  cursor: pointer;
+  transition: background 0.4s;
+}
+
+.cardWrapper:hover .like-button {
+  opacity: 100;
+  z-index: 999;
+  bottom: 30px;
+}
+
+.like-button.liked {
+  opacity: 100;
+  z-index: 999;
+  bottom: 30px;
+}
+
+.like-button.liked .heart-like-button::before,
+.like-button.liked .heart-like-button::after {
+  background-color: #ff595e;
+}
+
+.like-button.liked .heart-like-button {
+  animation: liked 0.4s ease;
+}
+
+@keyframes liked {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,96 @@
+.modal-content {
+  color: #fff;
+  background: #222;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-body {
+  width: 100%;
+}
+
+.modal form {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.modal .modal-text-input {
+  width: 100%;
+  background-color: #383838;
+  border: none;
+  height: 40px;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.modal .modal-text-input:focus,
+.modal .modal-text-area:focus {
+  box-shadow: none;
+}
+
+.modal .modal-text-input:focus-visible,
+.modal .modal-text-area:focus-visible {
+  outline: none;
+}
+
+.modal .modal-text-area {
+  background-color: #383838;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+}
+
+.modal .translation {
+  opacity: 0.5;
+}
+
+.modal .formSpacing {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.modal .formSpacing2 {
+  margin-bottom: 20px;
+}
+
+.modal .spinner {
+  margin-left: 10px;
+}
+
+.modal .buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.modal-close-button,
+.modal-submit-button {
+  width: 47%;
+  padding: 14px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  margin-top: 16px;
+  align-self: center;
+  cursor: pointer;
+  transition: background-color 0.1s linear;
+}
+
+.modal-close-button {
+  background-color: #383838;
+  color: #efefef;
+}
+
+.modal-submit-button {
+  background-color: #0c8ce9;
+  color: #efefef;
+}
+
+.modal-close-button:hover,
+.modal-close-button:focus {
+  background-color: #0c8ce9;
+}
